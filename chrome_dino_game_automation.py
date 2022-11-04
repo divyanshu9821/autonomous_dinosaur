@@ -13,9 +13,11 @@ time.sleep(2)
 #             data[i,j]=0 # 0 means black color
 #     image.show() # show the screen shot after putting value 0 in rectangular block
 
-def check_background(data):
-    for i in range(360,361):
-        for j in range(600,601):
+
+# function to check backgroud because after some time game background change from light to dark or vice versa
+def check_background(data): 
+    for i in range(360,361): # range must be altered according to monitor 
+        for j in range(600,601): # range must be altered according to monitor 
             if data[i,j]>127:
                 return 1 #light
             else:
@@ -23,16 +25,16 @@ def check_background(data):
     return            
 
 def dark_obstacle(data):
-    for i in range(370,400):
-        for j in range(440,470):
+    for i in range(370,400): # range must be altered according to monitor 
+        for j in range(440,470): # range must be altered according to monitor 
             if data[i,j]<100:
                 pyautogui.press('up')
                 return
     return            
 
 def white_obstacle(data):
-    for i in range (370,400):
-        for j in range(440,470):
+    for i in range (370,400): # range must be altered according to monitor 
+        for j in range(440,470): # range must be altered according to monitor 
             if data[i,j]>=127:
                 pyautogui.press('up')
                 return  
