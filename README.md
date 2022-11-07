@@ -1,3 +1,3 @@
-basic project to apply that i learnt
+these projects are simply to apply what i learnt
 
 Work in progress .....
