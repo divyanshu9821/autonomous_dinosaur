@@ -1,10 +1,18 @@
+'''
+    this program mimic the keyboard actions using the library 'pyautogui' and play the game automatically without user.
+
+    start the dinosaurs game by entering 'chrome://dino' in google chrome and 
+    firstly set range according to screen using draw function select the pixels to look upon
+    then run this program in background
+    
+ '''
 import time # mainly to delay the execution of program
 from PIL import ImageGrab # pillow -> image library
 import pyautogui # perform keyboard functions
 
 time.sleep(2)
 
-# this function help to identify the place where i want to put the marker for check
+# this function help to identify the place where to put the marker for check
 # def draw():
 #     image = ImageGrab.grab().convert('L') # take screenshot convert to gray scale
 #     data = image.load() # pixel values in terms of 2d matrix
@@ -24,6 +32,7 @@ def check_background(data):
                 return 0 #dark
     return            
 
+# when background is light the obstacles like bird and tree appears dark
 def dark_obstacle(data):
     for i in range(370,400): # range must be altered according to monitor 
         for j in range(440,470): # range must be altered according to monitor 
@@ -32,6 +41,7 @@ def dark_obstacle(data):
                 return
     return            
 
+# when background is dark obstacles like bird and trees appears light
 def white_obstacle(data):
     for i in range (370,400): # range must be altered according to monitor 
         for j in range(440,470): # range must be altered according to monitor 
