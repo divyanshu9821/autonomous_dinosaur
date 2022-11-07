@@ -1,3 +1,3 @@
-basic project to apply some knowledge that i gain
+basic project to apply that i learnt
 
 Work in progress .....
