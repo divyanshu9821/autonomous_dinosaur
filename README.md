@@ -1,5 +1,7 @@
 # Auto Dinosaur
 
+## Add fun to Google chrome Dinosaur game
+
 This is created, when i was exploring internet for something fun, that day i found a python library "pyautogui" that can perform keyboard function but this project need much more than a library. :)<br>
 
 It uses two python libraries "pyautogui" and "PIL" (pillow).<br>
