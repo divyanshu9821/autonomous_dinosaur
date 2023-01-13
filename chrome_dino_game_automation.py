@@ -17,7 +17,7 @@ time.sleep(2)
 #     image = ImageGrab.grab().convert('L') # take screenshot convert to gray scale
 #     data = image.load() # pixel values in terms of 2d matrix
 #     for i in range(370,400): # x axis
-#         for j in range(440,470): # y axis
+#         for j in range(400,470): # y axis
 #             data[i,j]=0 # 0 means black color
 #     image.show() # show the screen shot after putting value 0 in rectangular block
 
@@ -34,8 +34,8 @@ def check_background(data):
 
 # when background is light the obstacles like bird and tree appears dark
 def dark_obstacle(data):
-    for i in range(370,400): # range must be altered according to monitor 
-        for j in range(440,470): # range must be altered according to monitor 
+    for i in range(395,400): # range must be altered according to monitor 
+        for j in range(400,470): # range must be altered according to monitor 
             if data[i,j]<100:
                 pyautogui.press('up')
                 return
@@ -43,8 +43,8 @@ def dark_obstacle(data):
 
 # when background is dark obstacles like bird and trees appears light
 def white_obstacle(data):
-    for i in range (370,400): # range must be altered according to monitor 
-        for j in range(440,470): # range must be altered according to monitor 
+    for i in range (395,400): # range must be altered according to monitor 
+        for j in range(400,470): # range must be altered according to monitor 
             if data[i,j]>=127:
                 pyautogui.press('up')
                 return  
